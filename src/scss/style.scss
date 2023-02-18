@@ -96,9 +96,9 @@ body {
 Снипет (HTML): cnt
 */
 [class*="__container"] {
-	max-width: rem(1320);
+	max-width: rem(1350);
 	margin: 0 auto;
-	padding: 0 rem(15);
+	padding: 0 rem(math.div($containerPadding, 2));
 }
 
 @if ($responsiveType==1) {
@@ -155,6 +155,9 @@ body {
 @import "header";
 @import "hero";
 @import "search";
+@import "propertice";
+@import "services";
+@import "featured";
 @import "footer";
 
 // Подключение стилей отдельных страниц

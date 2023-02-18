@@ -5,29 +5,44 @@
 	// .select__body
 	&__body {
 		position: relative;
+		width: 100%;
 	}
 	// .select__title
 	&__title {
-		color: inherit;
+		position: relative;
+		color: #889099;
+		font-weight: 400;
 		text-align: left;
-		border: 1px solid #d9d9d9;
-		background-color: #fff;
+		white-space: nowrap;
+		line-height: rem(24);
+		background-color: #ffffff;
 		cursor: pointer;
 		width: 100%;
-		border-radius: 4px;
+		padding-right: rem(40);
+		@media (max-width: 1005.98px) {
+			&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: #CFD3D6;
+			height: rem(1);
+			width: 90%;
+			}
+		}
+		
 	}
 	// .select__value
 	&__value {
 		display: flex;
 		align-items: center;
-		height: rem(30);
-		padding: 0 rem(15);
+		height: rem(24);
 		gap: rem(10);
 		> * {
 			flex: 1 1 auto;
 		}
 		&:after {
-			content: "";
+			content: url("@img/svg/arrow-select.svg");
 			align-self: stretch;
 			flex: 0 0 10px;
 			transition: all 0.3s ease 0s;
@@ -56,16 +71,14 @@
 	}
 	// .select__options
 	&__options {
-		color: #000;
+		color: #889099;
 		position: absolute;
 		top: 29px;
 		border-radius: 0 0 4px 4px;
-		min-width: 100%;
+		min-width: fit-content;
+		box-shadow: 0px rem(25.697) rem(72.8081) rgba(59, 77, 129, 0.2);
 		left: 0;
 		background-color: #fff;
-		border-top: 0;
-		border: 1px solid #d9d9d9;
-		border-top: 0;
 		padding: 10px 0px 5px 0px;
 	}
 	// .select__scroll
