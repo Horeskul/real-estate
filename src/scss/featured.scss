@@ -1,8 +1,8 @@
 .featured {
     // .featured__container
     &__container {
-        padding-top: rem(100);
-        padding-bottom: rem(100);
+        @include adaptiveValue("padding-top", 100, 50);
+        @include adaptiveValue("padding-bottom", 50, 30);
     }
     // .featured__body
     &__body {

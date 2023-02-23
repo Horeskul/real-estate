@@ -24,21 +24,19 @@ import "../../scss/base/swiper.scss";
 // import 'swiper/css';
 
 // Инициализация слайдеров
-function initSliders() {
-	// Перечень слайдеров
-	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+// function initSliders() {
+// 	// Перечень слайдеров
+// 	// Проверяем, есть ли слайдер на странице
+	if (document.querySelector('.latest__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем скласс нужного слайдера
+		new Swiper('.latest__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
 			autoHeight: true,
-			speed: 800,
+			speed: 1000,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -76,35 +74,48 @@ function initSliders() {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
 			},
-			/*
+			
 			// Брейкпоинты
 			breakpoints: {
-				640: {
+				320: {
 					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+					spaceBetween: 10,
+				},
+				440: {
+					slidesPerView: 1.3,
+					spaceBetween: 10,
+				},
+				540: {
+					slidesPerView: 1.5,
+					spaceBetween: 15,
+				},
+				650: {
+					slidesPerView: 1.8,
+					spaceBetween: 15,
 				},
 				768: {
-					slidesPerView: 2,
+					slidesPerView: 2.2,
 					spaceBetween: 20,
 				},
-				992: {
+				850: {
+					slidesPerView: 2.7,
+					spaceBetween: 20,
+				},
+				991: {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},
-				1268: {
+				1200: {
 					slidesPerView: 4,
-					spaceBetween: 30,
+					spaceBetween: 24,
 				},
 			},
-			*/
+			
 			// События
-			on: {
-
-			}
+			on: {}
 		});
 	}
-}
+
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');

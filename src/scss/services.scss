@@ -2,8 +2,8 @@
     background: #EDEFF6;
     // .services__container
     &__container {
-        padding-top: rem(100);
-        padding-bottom: rem(100);
+        @include adaptiveValue("padding-top", 100, 50);
+        @include adaptiveValue("padding-bottom", 100, 50);
     }
     // .services__body
     &__body {

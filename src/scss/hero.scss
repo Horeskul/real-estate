@@ -7,7 +7,8 @@
     }
     // .hero__body
     &__body {
-        padding: rem(250) 0 rem(212) 0;
+        @include adaptiveValue("padding-top", 250, 150);
+        @include adaptiveValue("padding-bottom", 212, 200);
     }
     // .hero__title
     &__title {

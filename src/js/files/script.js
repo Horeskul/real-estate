@@ -8,8 +8,6 @@ let loadMoreBtn = document.querySelector('#load-more');
 let currentItem = 6;
 let boxes = document.querySelectorAll('.featured__item');
 
-console.log(boxes);
-
 function loadMore() {
     for (let i = currentItem; i < currentItem + 3; i++) {
         boxes[i].style.display = 'inline-block';

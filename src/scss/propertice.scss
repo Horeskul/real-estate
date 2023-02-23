@@ -1,8 +1,8 @@
 .propertice {
     // .propertice__container
     &__container {
-        padding-top: rem(100);
-        padding-bottom: rem(100);
+        @include adaptiveValue("padding-top", 100, 50);
+        @include adaptiveValue("padding-bottom", 100, 35);
     }
     // .propertice__body
     &__body {
@@ -35,6 +35,7 @@
     }
     // .propertice__item
     &__item {
+        overflow: hidden;
         position: relative;
         border-radius: rem(8);
         min-height: rem(241);
@@ -60,12 +61,15 @@
             }
             .propertice__actions {
                 display: block;
-                transition: all 2s ease 0s;
+            }
+            .propertice__image {
+                transform: scale(1.1);
             }
         }
     }
     // .propertice__image
     &__image {
+        transition: all 0.5s ease 0s;
         border-radius: rem(8);
     }
     // .propertice__actions
