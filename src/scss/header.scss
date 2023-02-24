@@ -7,7 +7,6 @@
 	width: 100%;
 	@include adaptiveValue("padding-top", 25, 15);
 	@include adaptiveValue("padding-bottom", 25, 15);
-	transition: all 0.5 ease 0s;
 	// .header__container-big
 	&__container-big {
 		display: flex;
@@ -36,15 +35,16 @@
 		white-space: nowrap;
 	}
 	&._header-scroll {
-		position: fixed;
-		backdrop-filter: blur(5px);
-		padding: rem(10);
-	}
-	&._header-show {
 		@include adaptiveValue("padding-top", 25, 15);
 		@include adaptiveValue("padding-bottom", 25, 15);
 		background: #220b30;
 		color: #FFFFFF;
+		animation: slideUp 0.35s ease-out 0.5s;
+	}
+	&._header-show {
+		position: fixed;
+		top: 0;
+		animation: slideDown 0.35s ease-out;
 	}
 }
 
@@ -179,3 +179,20 @@
 	}
 }
 
+@keyframes slideDown {
+	from {
+	  transform: translateY(-100%);
+	}
+	to {
+	  transform: translateY(0);
+	}
+}
+
+@keyframes slideUp {
+	from {
+	  transform: translateY(0);
+	}
+	to {
+	  transform: translateY(-100%);
+	}
+}

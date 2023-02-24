@@ -1,7 +1,7 @@
 .find {
-    background: linear-gradient(0deg, rgba(6, 48, 83, 0.8), rgba(6, 48, 83, 0.8)), url('@img/propertice/property_1.jpeg');
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(0deg, rgba(6, 48, 83, 0.8), rgba(6, 48, 83, 0.8));
     // .find__container
     &__container {
         @include adaptiveValue("padding-top", 150, 70);
@@ -31,6 +31,15 @@
     }
     // .find__button
     &__button {
+    }
+    img {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 .title {
