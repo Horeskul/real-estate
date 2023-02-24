@@ -160,18 +160,21 @@
 .swiper-button-prev {
     padding: rem(10);
     max-width: rem(44);
+    @media (max-width: $tablet) {
+		padding: rem(10) rem(10);
+	}
 }
 .swiper-button-next {
     padding: rem(10);
     max-width: rem(44);
+    @media (max-width: $tablet) {
+		padding: rem(10) rem(10);
+	}
 }
 
 .latest__swiper-buttons {
     text-align: center;
     max-height: rem(44);
-    .button {
-        padding: 0;
-    }
 }
 .swiper-button-disabled {
     background-color: #B7BFD9;
