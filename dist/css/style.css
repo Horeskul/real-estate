@@ -1242,11 +1242,31 @@ h6 {
 .swiper-button-prev {
   padding: 0.625rem;
   max-width: 2.75rem;
+  font-family: Inter;
+  font-weight: 500;
+  background-color: #540375;
+  color: #fff;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  display: inline-block;
 }
 
 .swiper-button-next {
   padding: 0.625rem;
   max-width: 2.75rem;
+  font-family: Inter;
+  font-weight: 500;
+  background-color: #540375;
+  color: #fff;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  display: inline-block;
 }
 
 .latest__swiper-buttons {
@@ -1677,6 +1697,14 @@ h6 {
 
 @media (max-width: 359.98px) {
   .button {
+    font-size: 1.5625rem;
+  }
+
+  .swiper-button-prev {
+    font-size: 1.5625rem;
+  }
+
+  .swiper-button-next {
     font-size: 1.5625rem;
   }
 }
@@ -2344,5 +2372,13 @@ h6 {
 
   .menu__link:hover {
     color: #FF7000;
+  }
+
+  .swiper-button-prev:hover {
+    background-color: #FF7000;
+  }
+
+  .swiper-button-next:hover {
+    background-color: #FF7000;
   }
 }
