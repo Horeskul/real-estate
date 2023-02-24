@@ -13,11 +13,6 @@
             @include adaptiveValue("row-gap", 30, 10);
             @include adaptiveValue("column-gap", 30, 20);
         }
-        @media (max-width: 599.98px) {
-            display: flex;
-            flex-direction: column;
-            gap: rem(20);
-        }
         >* {
             @include adaptiveValue("padding-left", 30, 10, 2, 991, 600);
         }
@@ -162,3 +157,10 @@
     }
 }
 //====================================================================================================
+.footer__container {
+    @media (max-width: 37.5rem) {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+    }
+}
